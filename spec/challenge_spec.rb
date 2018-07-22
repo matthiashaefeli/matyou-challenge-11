@@ -16,4 +16,9 @@ describe 'prime' do
   end
 end
 
+describe 'survivor' do
+  it 'returns the survivor from a given list and given integer (check explanation on EX.md)' do
+    expect(survivor([1,2,3,4,5,6,7], 3)). to eq 4
+  end
+end
 
