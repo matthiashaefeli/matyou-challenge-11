@@ -32,4 +32,13 @@ describe 'find sentence' do
   end
 end
 
+describe 'number salad' do
+  it 'returns final number (check ex.md for more explenation)' do
+    expect(number_salad([1, 10, 30,50, 200, 30, 10])).to eq 31
+  end
+
+  it 'returns final number (check ex.md for more explenation)' do
+    expect(number_salad([220, 10, 33333, 459, 2309, 44])).to eq 30311
+  end
+end
 
