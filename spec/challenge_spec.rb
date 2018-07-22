@@ -22,3 +22,14 @@ describe 'survivor' do
   end
 end
 
+describe 'find sentence' do
+  it 'removes all numbers special characters and repeated characters to find the sentence' do
+    expect(find_sentence('t45345h??i_-s iiii((s )(*t44h89e a**an345s?/w098e{}r')).to eq 'this is the answer'
+  end
+
+  it 'removes all numbers special characters and repeated characters to find the sentence' do
+    expect(find_sentence('(*(*&o341243?>nllllllly o__++=n}{e cccchhhhaaaarrrraaacccctttteeeeerrrr words')).to eq 'only one character words'
+  end
+end
+
+
