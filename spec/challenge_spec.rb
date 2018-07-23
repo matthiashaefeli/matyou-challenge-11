@@ -33,11 +33,11 @@ describe 'find sentence' do
 end
 
 describe 'number salad' do
-  it 'returns final number (check ex.md for more explenation)' do
+  it 'returns final number (check ex.md for more explanation)' do
     expect(number_salad([1, 10, 30,50, 200, 30, 10])).to eq 31
   end
 
-  it 'returns final number (check ex.md for more explenation)' do
+  it 'returns final number (check ex.md for more explanation)' do
     expect(number_salad([220, 10, 33333, 459, 2309, 44])).to eq 30311
   end
 end
@@ -53,3 +53,85 @@ describe 'top words' do
     expect(top_words(string)).to eq ["a", "of", "on"]
   end
 end
+
+describe 'perfect power' do
+  it 'returns the perfect power from a given integer (check ex.md for more explanation' do
+    expect(perfect_power(4)).to eq [[2,2]]
+  end
+
+  it 'returns the perfect power from a given integer (check ex.md for more explanation' do
+    expect(perfect_power(8)).to eq [[2,3]]
+  end
+
+  it 'returns the perfect power from a given integer (check ex.md for more explanation' do
+    expect(perfect_power(36)).to eq [[6,2]]
+  end
+
+  it 'returns the perfect power from a given integer (check ex.md for more explanation' do
+    expect(perfect_power(81)).to eq [[3,4], [9,2]]
+  end
+end
+
+describe 'number to roman converter' do
+  it 'returns the roman number of a given number' do
+    expect(number_to_roman(10)).to be 'X'
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(number_to_roman(5)).to be 'V'
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(number_to_roman(2)).to be 'II'
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(number_to_roman(16)).to be 'XVI'
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(number_to_roman(66)).to be 'LXVI'
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(number_to_roman(386)).to be 'CCCLXXXVI'
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(number_to_roman(2369)).to be 'MMCCCLXIX'
+  end
+end
+
+describe 'roman to number converter' do
+  it 'returns the roman number of a given number' do
+    expect(roman_to_number('X')).to be 10
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(roman_to_number(V)).to be 5
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(roman_to_number('II')).to be 2
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(roman_to_number('XVI')).to be 16
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(roman_to_number('LXVI')).to be 66
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(roman_to_number('CCCLXXXVI')).to be 386
+  end
+
+  it 'returns the roman number of a given number' do
+    expect(roman_to_number('MMCCCLXIX')).to be 2369
+  end
+end
+
+
+
+
