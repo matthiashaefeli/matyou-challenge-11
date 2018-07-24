@@ -55,19 +55,19 @@ describe 'top words' do
 end
 
 describe 'perfect power' do
-  it 'returns the perfect power from a given integer (check ex.md for more explanation' do
+  it 'returns the perfect power from a given integer (check ex.md for more explanation)' do
     expect(perfect_power(4)).to eq [[2,2]]
   end
 
-  it 'returns the perfect power from a given integer (check ex.md for more explanation' do
+  it 'returns the perfect power from a given integer (check ex.md for more explanation)' do
     expect(perfect_power(8)).to eq [[2,3]]
   end
 
-  it 'returns the perfect power from a given integer (check ex.md for more explanation' do
+  it 'returns the perfect power from a given integer (check ex.md for more explanation)' do
     expect(perfect_power(36)).to eq [[6,2]]
   end
 
-  it 'returns the perfect power from a given integer (check ex.md for more explanation' do
+  it 'returns the perfect power from a given integer (check ex.md for more explanation)' do
     expect(perfect_power(81)).to eq [[3,4], [9,2]]
   end
 end
@@ -103,35 +103,87 @@ describe 'number to roman converter' do
 end
 
 describe 'roman to number converter' do
-  it 'returns the roman number of a given number' do
+  it 'returns the number of a given roman number' do
     expect(roman_to_number('X')).to be 10
   end
 
-  it 'returns the roman number of a given number' do
+  it 'returns the number of a given roman number' do
     expect(roman_to_number(V)).to be 5
   end
 
-  it 'returns the roman number of a given number' do
+  it 'returns the number of a given roman number' do
     expect(roman_to_number('II')).to be 2
   end
 
-  it 'returns the roman number of a given number' do
+  it 'returns the number of a given roman number' do
     expect(roman_to_number('XVI')).to be 16
   end
 
-  it 'returns the roman number of a given number' do
+  it 'returns the number of a given roman number' do
     expect(roman_to_number('LXVI')).to be 66
   end
 
-  it 'returns the roman number of a given number' do
+  it 'returns the number of a given roman number' do
     expect(roman_to_number('CCCLXXXVI')).to be 386
   end
 
-  it 'returns the roman number of a given number' do
+  it 'returns the number of a given roman number' do
     expect(roman_to_number('MMCCCLXIX')).to be 2369
   end
 end
 
+describe 'validate sudoku' do
+  it 'returns true if the given array is the solution for a sudoku (check ex.md for more explanation)' do
+    solution = [
+      [7,8,4,  1,5,9,  3,2,6],
+      [5,3,9,  6,7,2,  8,4,1],
+      [6,1,2,  4,3,8,  7,5,9],
+    
+      [9,2,8,  7,1,5,  4,6,3],
+      [3,5,7,  8,4,6,  1,9,2],
+      [4,6,1,  9,2,3,  5,8,7],
+    
+      [8,7,6,  3,9,4,  2,1,5],
+      [2,4,3,  5,6,1,  9,7,8],
+      [1,9,5,  2,8,7,  6,3,4]
+    ]
+    expect(validate_sudoku(solution)).to be true 
+  end
+
+  it 'returns false if the given array is not the solution for a sudoku (check ex.md for more explanation)' do
+    solution = [
+      [7,8,4,  1,5,9,  7,2,6],
+      [5,3,9,  6,7,2,  8,4,1],
+      [6,1,2,  4,3,8,  3,5,9],
+    
+      [9,2,8,  7,1,5,  4,6,3],
+      [3,5,7,  8,4,6,  1,9,2],
+      [4,6,1,  9,2,3,  5,8,7],
+    
+      [8,7,6,  3,9,4,  2,1,5],
+      [2,4,3,  5,6,1,  9,7,8],
+      [1,9,5,  2,8,7,  6,3,4]
+    ]
+    expect(validate_sudoku(solution)).to be false 
+  end
+
+  it 'returns false if the given array is not the solution for a sudoku (check ex.md for more explanation)' do
+    solution = [
+      [7,8,4,  1,5,9,  3,2,6],
+      [5,3,9,  6,7,2,  8,4,1],
+      [6,1,2,  4,3,8,  7,5,9],
+    
+      [9,2,8,  7,1,5,  4,6,3],
+      [3,5,7,  8,4,6,  1,9,2],
+      [4,6,1,  9,2,3,  5,8,7],
+    
+      [8,7,6,  3,8,4,  2,1,5],
+      [2,4,3,  5,6,1,  9,7,8],
+      [1,9,5,  2,9,7,  6,3,4]
+    ]
+    expect(validate_sudoku(solution)).to be false 
+  end
+end
 
 
 
