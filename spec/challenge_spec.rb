@@ -133,7 +133,7 @@ describe 'roman to number converter' do
 end
 
 describe 'validate sudoku' do
-  it 'returns true if the given array is the solution for a sudoku (check ex.md for more explanation)' do
+  it 'returns true if the given array is the solution for a sudoku' do
     solution = [
       [7,8,4,  1,5,9,  3,2,6],
       [5,3,9,  6,7,2,  8,4,1],
@@ -150,7 +150,7 @@ describe 'validate sudoku' do
     expect(validate_sudoku(solution)).to be true 
   end
 
-  it 'returns false if the given array is not the solution for a sudoku (check ex.md for more explanation)' do
+  it 'returns false if the given array is not the solution for a sudoku' do
     solution = [
       [7,8,4,  1,5,9,  7,2,6],
       [5,3,9,  6,7,2,  8,4,1],
@@ -167,7 +167,7 @@ describe 'validate sudoku' do
     expect(validate_sudoku(solution)).to be false 
   end
 
-  it 'returns false if the given array is not the solution for a sudoku (check ex.md for more explanation)' do
+  it 'returns false if the given array is not the solution for a sudoku' do
     solution = [
       [7,8,4,  1,5,9,  3,2,6],
       [5,3,9,  6,7,2,  8,4,1],
@@ -185,5 +185,12 @@ describe 'validate sudoku' do
   end
 end
 
+describe 'hashtag generator' do
+  it 'returns Hashtagstring from a given string' do
+    expect(hashtag('Hello world')).to eq '#HelloWorld'
+  end
 
-
+  it 'returns Hashtagstring from a given string' do
+    expect(hashtag('Yes it is a string')).to eq '#YesItIsAString'
+  end
+end
